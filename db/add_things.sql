@@ -1,0 +1,1 @@
+INSERT INTO things (name_thing, price, img) VALUES ($1, $2, $3);
