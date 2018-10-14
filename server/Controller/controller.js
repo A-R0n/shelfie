@@ -3,11 +3,11 @@
 const addThings = (req, res, next) => {
     req.app
         .get('db')
-        .add_things([req.body.things])
+        .add_things([req.body.name_thing, req.body.price, req.body.img])
         .then(response => 
             res
                 .status(200)
-                .send({ message: `Succesfully added ${req.body.things} to DB`})
+                .send({ message: `Succesfully added ${req.body.name} to DB`})
         )
         .catch(e => res.status(500).send(e))
 };
@@ -15,7 +15,7 @@ const addThings = (req, res, next) => {
 const getInventory = (req, res, next) => {
     req.app
         .get('db')
-        .get_inventory()
+        .get_things()
         .then(response => res.status(200).send(response))
         .catch(err => res.status(500).send(err));
 };
@@ -37,6 +37,6 @@ const deleteThings = (req, res, next) => {
 module.exports = {
     addThings,
     getInventory,
-    deleteThings,
+    deleteThings
    
 };
