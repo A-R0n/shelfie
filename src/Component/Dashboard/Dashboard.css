@@ -1,0 +1,27 @@
+.dashboard {
+    background-color: white;
+}
+
+.listItems {
+    background: maroon;
+    width: 50vw;
+
+}
+
+#image {
+    width: 200px;
+    height: auto;
+}
+
+#name {
+    
+}
+#price {
+
+}
+
+.index {
+    padding: 1rem;
+    
+}
+

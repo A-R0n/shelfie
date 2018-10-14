@@ -31,7 +31,7 @@ class App extends Component {
     let {inventory} = this.state;
     // console.log(this.state)
     return (
-      <div className="App">
+      <div>
         <Header />
         <Dashboard inventory={inventory}/>
         <Form />
