@@ -1,13 +1,14 @@
 
 
 const addThings = (req, res, next) => {
+    console.log(req.body)
     req.app
         .get('db')
         .add_things([req.body.name_thing, req.body.price, req.body.img])
         .then(response => 
             res
                 .status(200)
-                .send({ message: `Succesfully added ${req.body.name} to DB`})
+                .send(response)
         )
         .catch(e => res.status(500).send(e))
 };
